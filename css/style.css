@@ -45,7 +45,7 @@
   
   nav {
     width: 100%;
-    background: rgba(28, 25, 25, 0.8);
+    background: rgba(28, 25, 25);
     position: fixed;
     height: 50px;
     z-index: 2;
@@ -92,18 +92,31 @@
     top: 50px;
     height: calc(100% - 50px);
     width: 100%;
-    background-color: #f1f1f1;
   }
   
   section.views {
     display: flex;
-    padding: 2em;
-    align-items: start;
-    justify-content: space-around;
+  }
+
+  section.views.column-ct {
+    flex-direction: column;
+    color: #222;
+    text-align: center;
+  }
+
+  .img-block {
+    background-color: #2c0b29;
+    flex-grow: 1;
+    text-align: center;
+    opacity: 0.95;
   }
 
   .text-block {
     padding: 0 1em;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .text-block li {
@@ -114,7 +127,6 @@
   .profile {
     display: flex;
     width: 150px;
-    height: 150px;
     flex-direction: column;
   }
 
