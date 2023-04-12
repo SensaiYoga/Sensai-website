@@ -23,6 +23,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-size: 1.2em;
   }
   
   .container {
@@ -100,8 +101,9 @@
 
   section.views.column-ct {
     flex-direction: column;
-    color: #222;
+    color: #111;
     text-align: center;
+    padding: 2em 0;
   }
 
   .img-block {
@@ -132,11 +134,22 @@
 
   .profile p {
     text-align: center;
+    margin: 0.1em 0;
   }
 
   .profile img {
     min-height: 150px;
     border-radius: 150px;
+    background-color: #f1f1f1;
+  }
+
+  .profile-name {
+    font-size: 0.75em;
+    font-weight: 600;
+  }
+
+  .profile-title {
+    font-size: 0.7em;
   }
 
   .intro {
