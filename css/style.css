@@ -25,6 +25,11 @@
     background-size: cover;
     font-size: 1.2em;
   }
+
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+  }
   
   .container {
     width: 100%;
@@ -46,7 +51,7 @@
   
   nav {
     width: 100%;
-    background: rgba(28, 25, 25);
+    background: rgba(55, 23, 51, 1);
     position: fixed;
     height: 50px;
     z-index: 2;
@@ -73,15 +78,15 @@
   
   .menu > a:hover {
     color: #f5f5f5;
-    background-color: rgba(235, 89, 55, 0.2);
+    background-color: rgba(90, 45, 74, 1);
     -webkit-transition: background-color 100ms ease-in;
         -moz-transition: background-color 100ms ease-in;
         -o-transition: background-color 100ms ease-in;
         transition: background-color 100ms ease-in;
   }
   .menu > a.selected {
-    background-color: rgba(235, 89, 55, 0.5);
-    color: #f5f5f5;
+    background-color: rgba(90, 45, 74, 1);
+    color: rgb(206, 177, 117);
     -webkit-transition: background-color 200ms ease-in;
         -moz-transition: background-color 200ms ease-in;
         -o-transition: background-color 200ms ease-in;
@@ -150,6 +155,7 @@
 
   .profile-title {
     font-size: 0.7em;
+    font-style: italic;
   }
 
   .intro {
