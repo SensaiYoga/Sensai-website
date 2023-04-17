@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-  font-family: "Dancing Script", cursive;
+  font-family: "Sacramento", cursive;
   font-size: 4rem;
 }
 
@@ -73,7 +73,7 @@ nav {
 
 .menu > a {
   display: inline-block;
-  width: 25%;
+  width: 20%;
   float: left;
   text-align: center;
   color: #bbb;
@@ -99,6 +99,11 @@ nav {
   transition: background-color 200ms ease-in;
 }
 
+.menu > a.active {
+  background-color: rgb(253, 214, 103);
+  color: rgb(90, 45, 74);
+}
+
 .content {
   position: relative;
   top: 50px;
@@ -108,6 +113,10 @@ nav {
 
 section.views {
   display: flex;
+}
+
+ul {
+  list-style-type: "𑁍 ";
 }
 
 section.views.column-ct {
@@ -135,7 +144,7 @@ section.views.column-ct {
 
 .text-block li {
   margin-top: 20px;
-  list-style-type: square;
+  list-style-type: "𑁍";
 }
 
 .profile {
