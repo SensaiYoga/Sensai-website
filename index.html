@@ -18,13 +18,17 @@
 			<ul class="menu">
 				<a href="#" class="active">Home</a>
 				<a href="#overview">Overview</a>
-				<a href="#demo">Demo</a>
+				<a href="#features">Features</a>
+				<a href="#dataset">Datasets</a>
+				<a href="#modeling">Modeling</a>
 				<a href="#howitworks">Architecture</a>
+				<a href="#demo">Demo</a>
 				<a href="#theteam">The Team</a>
 			</ul>
 		</nav>
-		<div class="content">
-			<!-- <section class="views">
+		<main>
+			<div class="content">
+				<!-- <section class="views">
 				<div class="img-block">
 					<img src="assets/sensai.png" height="400" />
 				</div>
@@ -34,89 +38,145 @@
 					AI Powered Yoga App
 				</div>
 			</section> -->
-			<section class="views">
-				<div class="img-block">
-					<iframe width="100%" height="420" src="https://www.youtube.com/embed/Vn-gTj-zL8I?controls=1&autoplay=1&mute=1"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
-				</div>
-			</section>
-			<section class="views column-ct" id="overview">
-				<h1>Overview</h1>
-				<p>Yoga is about 5000 years old and one of the ancient and proven forms of exercise for gaining fitness.
-				</p>
-				<div class="text-block">
-					<ul style="list-style-type:disc; text-align: left; flex: 2">
-						Sensai is:
-						<li style="padding-left: 10px">
-							An AI powered web application that addresses significant pain point in yoga by providing
-							accurate and personalized feedback on alignment and posture
-						</li>
-						<li style="padding-left: 10px">
-							Non-intrusive solution that depends on your willingness to share data
-						</li>
-						<li style="padding-left: 10px">
-							Leverages the latest advancements in ML and CV to detect subtlest movements and provide
-							customized feedback to users.
-						</li>
-					</ul>
-					<img src="assets/illustration.jpeg" style="flex: 1" />
-				</div>
-			</section>
-			<section class="views column-ct" id="demo">
-				<h1>Demo</h1>
+				<section class="views">
+					<div class="img-block">
+						<iframe width="100%" height="420"
+							src="https://www.youtube.com/embed/Vn-gTj-zL8I?controls=1&autoplay=1&mute=1"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+					</div>
+				</section>
+				<section class="views column-ct" id="overview">
+					<h2>Overview</h2>
+					<p>
+						Yoga is about 5000 years old and one of the ancient and proven forms of exercise for gaining
+						fitness.
+						It is the most used complementary health approach in the US. The yoga industry is projected to
+						reach $215 billion by 2025. There is a lack of on-demand access to quality feedback while
+						performing yoga.
+					</p>
+					<p>We partnered with a smart yoga mat manufacturer, <a href="https://yogifi.fit/">YogiFi</a>, who
+						uses the heatmap from the pressure-sensitive, smart yoga mats to classify yoga poses and provide
+						recommendations to its customers. However, due to heatmap signatures being the same for some
+						yoga poses, with difference being only in the upper body postures, YogiFi had challenges
+						classifying
+						them.
+					</p>
+					<div class="text-block">
+						<div>
+							<img src="assets/poses/YFA0001.png" alt="Palm Tree Pose" height="200px" width="200px" />
+							<p>Palm Tree
+								Pose</p> 
+						</div>
+						<div><img src="assets/poses/YFA0002.png" alt="Prayer Pose" height="200px" width="200px" />
+							<p>Prayer
+								Pose</p>
+						</div>
 
-				<body>
-					<video width="100%" height="600vh" style="border:5px; object-fit: scale-down;" poster="assets/sensai.png" controls="controls">
-						<source src="assets/Capstone_Demo.mp4" type="video/mp4">
-					</video>
-				</body>
-			</section>
-			<section class="views column-ct" id="howitworks">
-				<h1>How it works</h1>
-				<p>Leverages state-of-the-art Machine Learning solutions and Software Engineering best practices to
-					provide a low-cost, serverless Yoga assistant hosted on AWS</p>
-				<div class="text-block">
-					<img src="assets/architecture.png" height="400" style="border:5px" />
-				</div>
-			</section>
-			<section class="views column-ct" id="theteam">
-				<h1>Meet the team</h1>
-				<div class="text-block">
-					<div class="profile">
-						<img src="assets/atreyi.png" />
-						<p class="profile-name">Atreyi Dasmahapatra
-						<p>
-						<p class="profile-title">Project Manager</p>
+						<div><img src="assets/poses/YFA0003.png" alt="Standing Backbend Pose" height="200px"
+								width="200px" />
+							<p>Standing Backbend Pose</p>
+						</div>
+
 					</div>
-					<div class="profile">
-						<img src="assets/ajeya.png" />
-						<p class="profile-name">Ajeya Jayaram
-						<p>
-						<p class="profile-title">Front-end Engineer</p>
+				</section>
+				<section class="views column-ct" id="features">
+					<h2>Features</h2>
+					<div>
+						Sensai is:
+						<ul>
+							<li>
+								An AI powered web application that addresses significant pain point in yoga by providing
+								accurate feedback on alignment and posture.
+							</li>
+							<li>
+								It offers a non-intrusive solution that respects user privacy.
+							</li>
+							<li>
+								It leverages latest advancements in Machine Learning, Computer Vision and the best
+								practices of Software Engineering to provide a low-cost serverless architecture hosted
+								on Amazon Web Services (AWS).
+							</li>
+							<li>Our solution has the potential to be applied to other fitness domains.</li>
+						</ul>
+						<img src="assets/illustration.jpeg" style="flex: 1" />
 					</div>
-					<div class="profile">
-						<img src="assets/andrew.png" />
-						<p class="profile-name">Andrew Sotoodeh
-						<p>
-						<p class="profile-title">ML Engineer</p>
+				</section>
+				<section class="views column-ct" id="dataset">
+					<h2>Datasets</h2>
+					<p>Our primary dataset is the heatmap data collected from the pressure-sensitive smart yoga mats from YogiFi. This dataset contained 13,571 unique heatmaps for 58 yoga poses.</p>
+					<p>We create a secondary dataset using yoga pose images obtained from <a href="https://sites.google.com/view/yoga-82/home">Yoga-82</a> and yoga pose images shared by YogiFi. Using TensorFlow's <a href="https://www.tensorflow.org/hub/tutorials/movenet">Movenet</a> model, we extract 17 keypoints for 952 yoga pose images corresponding to 9 yoga poses.</p>
+				</section>
+				<section class="views column-ct" id="modeling">
+					<h2>Modeling</h2>
+					<p>
+						We evaluate four different approaches to yoga classification. The first two are uni-modal models
+						where we try classifying using the heatmap from the smart mats, provided by YogiFi, and 
+					</p>
+				</section>
+				<section class="views column-ct" id="howitworks">
+					<h2>How it works</h2>
+					<p>Sensai leverages state-of-the-art Machine Learning solutions and Software Engineering best practices to
+						provide a low-cost, serverless Yoga assistant hosted on AWS</p>
+					<div class="text-block">
+						<img src="assets/architecture.png" height="400" style="border:5px" />
 					</div>
-					<div class="profile">
-						<img src="assets/pavan.png" />
-						<p class="profile-name">Pavan Emani
-						<p>
-						<p class="profile-title">Data Engineer</p>
+				</section>
+				<section class="views column-ct" id="demo">
+					<h2>Demo</h2>
+
+					<body>
+						<video width="100%" height="600vh" style="border:5px; object-fit: scale-down;"
+							poster="assets/sensai.png" controls="controls">
+							<source src="assets/videos/Capstone_Demo.mp4" type="video/mp4">
+						</video>
+					</body>
+				</section>
+				<section class="views column-ct" id="theteam">
+					<h2>Meet the team</h2>
+					<div class="text-block">
+						<div class="profile">
+							<img src="assets/members/atreyi.png" />
+							<p class="profile-name">Atreyi Dasmahapatra
+							<p>
+							<p class="profile-title">Project Manager</p>
+						</div>
+						<div class="profile">
+							<img src="assets/members/ajeya.png" />
+							<p class="profile-name">Ajeya Jayaram
+							<p>
+							<p class="profile-title">Front-end Engineer</p>
+						</div>
+						<div class="profile">
+							<img src="assets/members/andrew.png" />
+							<p class="profile-name">Andrew Sotoodeh
+							<p>
+							<p class="profile-title">ML Engineer</p>
+						</div>
+						<div class="profile">
+							<img src="assets/members/pavan.png" />
+							<p class="profile-name">Pavan Emani
+							<p>
+							<p class="profile-title">Data Engineer</p>
+						</div>
+						<div class="profile">
+							<img src="assets/members/shannie.png" />
+							<p class="profile-name">Shannie Cheng
+							<p>
+							<p class="profile-title">Applied Scientist</p>
+						</div>
 					</div>
-					<div class="profile">
-						<img src="assets/shannie.png" />
-						<p class="profile-name">Shannie Cheng
-						<p>
-						<p class="profile-title">Applied Scientist</p>
-					</div>
-				</div>
-			</section>
-		</div>
+				</section>
+				<section class="views column-ct" id="footnoes">
+					<h2>References</h2>
+					<fn id=fn1>
+						<cite>https://www.cdc.gov/nchs/products/databriefs/db325.htm</cite>
+					</fn>
+
+				</section>
+			</div>
+		</main>
 	</div>
 	<script src="js/index.js"></script>
 </body>
