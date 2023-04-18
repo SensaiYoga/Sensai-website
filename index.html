@@ -41,7 +41,7 @@
 				<section class="views">
 					<div class="img-block">
 						<iframe width="100%" height="420"
-							src="https://www.youtube.com/embed/Vn-gTj-zL8I?controls=1&autoplay=1&mute=1"
+							src="https://www.youtube.com/embed/Vn-gTj-zL8I?controls=1&autoplay=1&mute=1&loop=1"
 							title="YouTube video player" frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							allowfullscreen></iframe>
@@ -105,19 +105,30 @@
 				</section>
 				<section class="views column-ct" id="dataset">
 					<h2>Datasets</h2>
-					<p>Our primary dataset is the heatmap data collected from the pressure-sensitive smart yoga mats from YogiFi. This dataset contained 13,571 unique heatmaps for 58 yoga poses.</p>
-					<p>We create a secondary dataset using yoga pose images obtained from <a href="https://sites.google.com/view/yoga-82/home">Yoga-82</a> and yoga pose images shared by YogiFi. Using TensorFlow's <a href="https://www.tensorflow.org/hub/tutorials/movenet">Movenet</a> model, we extract 17 keypoints for 952 yoga pose images corresponding to 9 yoga poses.</p>
+					<p>Our primary dataset is the heatmap data collected from the pressure-sensitive smart yoga mats
+						from YogiFi. This dataset contained 13,571 unique heatmaps for 58 yoga poses.</p>
+					<p>We create a secondary dataset using yoga pose images obtained from <a
+							href="https://sites.google.com/view/yoga-82/home">Yoga-82</a> and yoga pose images shared by
+						YogiFi. Using TensorFlow's <a
+							href="https://www.tensorflow.org/hub/tutorials/movenet">Movenet</a> model, we extract 17
+						keypoints for 952 yoga pose images corresponding to 9 yoga poses.</p>
 				</section>
 				<section class="views column-ct" id="modeling">
 					<h2>Modeling</h2>
 					<p>
 						We evaluate four different approaches to yoga classification. The first two are uni-modal models
-						where we try classifying using the heatmap from the smart mats, provided by YogiFi, and 
+						where we try classifying using the heatmap from the smart mats, provided by YogiFi, and the
+						keypoints that we extracted from the yoga pose images of Yoga-82 and yoga pose images from
+						YogiFi, using TensorFlow's Movenet model.
 					</p>
+					<p>Each heatmap has 1320 values, which can be represented as a 60x22 image. These images are used to
+						fine-tune a pre-trained EfficientNet-B0 convoluted neural network (CNN). We apply various
+						pre-processing transformations such as denoising, extracting contours and centering.</p>
 				</section>
 				<section class="views column-ct" id="howitworks">
 					<h2>How it works</h2>
-					<p>Sensai leverages state-of-the-art Machine Learning solutions and Software Engineering best practices to
+					<p>Sensai leverages state-of-the-art Machine Learning solutions and Software Engineering best
+						practices to
 						provide a low-cost, serverless Yoga assistant hosted on AWS</p>
 					<div class="text-block">
 						<img src="assets/architecture.png" height="400" style="border:5px" />
