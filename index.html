@@ -132,6 +132,14 @@
 
 					<p>In the early fusion model, we augment the heatmap data with the keypoints data and transform it
 						into an image where the last three rows contain the encoded keypoints data.</p>
+					<img src="assets/model/early-fusion.png" alt="early fusion" height="400" width="800"
+						style="align-self: center;" />
+
+					<p>In late fusion, we run the two uni-modal trained independently on the two modalities i.e.
+						heatmaps and kepypoints and then combine the outputs from the last layers and feed it into a
+						classfier.</p>
+					<img src="assets/model/late-fusion.png" alt="late fusion" height="400" width="800"
+						style="align-self: center;" />
 				</section>
 				<section class="views column-ct" id="howitworks">
 					<h2>How it works</h2>
@@ -188,10 +196,11 @@
 					</div>
 				</section>
 				<section class="views column-ct" id="footnoes">
-					<h2>References</h2>
-					<fn id=fn1>
-						<cite>https://www.cdc.gov/nchs/products/databriefs/db325.htm</cite>
-					</fn>
+					<h2>Acknowledgements</h2>
+					<p>We would like to extend our gratitude to our instructors - Fred Nugen and Ramesh Sarukkai
+						for their support and guidance. We thank YogiFi's Sankar Dasiga, Muralidhar Somisetty & Vinod Ajjarapu, who provided us with the smart yoga mat and
+						shared their heatmap dataset with us.
+					</p>
 
 				</section>
 			</div>

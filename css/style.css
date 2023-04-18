@@ -6,6 +6,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  line-height: 1.75em;
 }
 
 * {
@@ -112,7 +113,11 @@ section.views {
 }
 
 ul {
-  list-style-type: "𑁍 ";
+  list-style-type: "𑁍";
+}
+
+li {
+  padding-left: 2em;
 }
 
 section.views.column-ct {
@@ -148,6 +153,8 @@ section.views.column-ct:nth-child(odd) {
 .text-block li {
   margin-top: 20px;
   list-style-type: "𑁍";
+  list-style-position: outside;
+  padding-left: 2rem;
 }
 
 .profile {
