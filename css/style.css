@@ -70,7 +70,7 @@ nav {
 
 .menu > a {
   display: inline-block;
-  width: 12.5%;
+  width: 11.11%;
   float: left;
   text-align: center;
   color: #bbb;
@@ -122,7 +122,7 @@ li {
 
 section.views.column-ct {
   flex-direction: column;
-  padding: 2em 4em;
+  padding: 1em 2em;
 }
 
 section.views.column-ct:nth-child(even) {

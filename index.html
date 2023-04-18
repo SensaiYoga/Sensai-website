@@ -19,9 +19,10 @@
 				<a href="#" class="active">Home</a>
 				<a href="#overview">Overview</a>
 				<a href="#features">Features</a>
+				<a href="#howitworks">Architecture</a>
 				<a href="#dataset">Datasets</a>
 				<a href="#modeling">Modeling</a>
-				<a href="#howitworks">Architecture</a>
+				<a href="#results">Results</a>
 				<a href="#demo">Demo</a>
 				<a href="#theteam">The Team</a>
 			</ul>
@@ -103,6 +104,16 @@
 						</ul>
 					</div>
 				</section>
+				<section class="views column-ct" id="howitworks">
+					<h2>How it works</h2>
+					<p>Sensai leverages state-of-the-art Machine Learning solutions and Software Engineering best
+						practices to
+						provide a low-cost, serverless Yoga assistant hosted on AWS</p>
+					<div class="text-block">
+						<img src="assets/architecture.png" height="400" style="border:5px" />
+					</div>
+				</section>
+
 				<section class="views column-ct" id="dataset">
 					<h2>Datasets</h2>
 					<p>Our primary dataset is the heatmap data collected from the pressure-sensitive smart yoga mats
@@ -141,14 +152,37 @@
 					<img src="assets/model/late-fusion.png" alt="late fusion" height="400" width="800"
 						style="align-self: center;" />
 				</section>
-				<section class="views column-ct" id="howitworks">
-					<h2>How it works</h2>
-					<p>Sensai leverages state-of-the-art Machine Learning solutions and Software Engineering best
-						practices to
-						provide a low-cost, serverless Yoga assistant hosted on AWS</p>
-					<div class="text-block">
-						<img src="assets/architecture.png" height="400" style="border:5px" />
-					</div>
+				<section class="views column-ct" id="results">
+					<h2>Results</h2>
+					<p>The heatmap model has <strong>94%</strong> accuracy and is able to decluster most of
+						the yoga poses. However, the model performs poorly on 3 clustered poses. mainly because the heat
+						maps are identical and the yoga asana difference lies only in the upper body posture.
+					</p>
+					<p>The keypoints model has <strong>95%</strong> accuracy, implying that keypoints are able to
+						decluster most of the poses. However, the model performs poorly on postures that are only
+						different in the hand gestures and facial orientation since the Movenet model we use to extract
+						keypoints does not capture them. We see that with the keypoints model is
+						still not able to decluster all of the poses.</p> <img
+						src="assets/model/keypoints-confusion.png" alt="keypoints confusion matrix" height="400"
+						width="400" style="align-self: center;" />
+
+					<p>The results from the early-fusion validates our hypothesis that we can use multimodal model to
+						decluster the
+						yoga poses that we were not able to with just the heatmap. However, we still see from the
+						confusion
+						matrix, while it improves upon the uni-modal model, the model has some trouble classifying these
+						clustered poses.
+					</p>
+					<img src="assets/model/early-fusion-confusion.png" alt="early fusion confusion matrix" height="400"
+						width="400" style="align-self: center;" />
+					<p>The late-fusion model was to achieve high training and validation accuracy of nearly 100%.
+						The confusion matrix shows that it is able to classify almost all of the poses with only a
+						fraction
+						of poses being falsely predicted.
+
+					</p>
+					<img src="assets/model/late-fusion-confusion.png" alt="late fusion confusion matrix" height="400"
+						width="400" style="align-self: center;" />
 				</section>
 				<section class="views column-ct" id="demo">
 					<h2>Demo</h2>
@@ -198,7 +232,8 @@
 				<section class="views column-ct" id="footnoes">
 					<h2>Acknowledgements</h2>
 					<p>We would like to extend our gratitude to our instructors - Fred Nugen and Ramesh Sarukkai
-						for their support and guidance. We thank YogiFi's Sankar Dasiga, Muralidhar Somisetty & Vinod Ajjarapu, who provided us with the smart yoga mat and
+						for their support and guidance. We thank YogiFi's Sankar Dasiga, Muralidhar Somisetty & Vinod
+						Ajjarapu, who provided us with the smart yoga mat and
 						shared their heatmap dataset with us.
 					</p>
 
