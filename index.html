@@ -84,7 +84,8 @@
 				<section class="views column-ct" id="features">
 					<h2>Features</h2>
 					<div>
-						Sensai is:
+						To address the challenges faced by YogiFi, we developed Sensai. Some of the highlights of our
+						solution are:
 						<ul>
 							<li>
 								An AI powered web application that addresses significant pain point in yoga by providing
@@ -100,7 +101,6 @@
 							</li>
 							<li>Our solution has the potential to be applied to other fitness domains.</li>
 						</ul>
-						<img src="assets/illustration.jpeg" style="flex: 1" />
 					</div>
 				</section>
 				<section class="views column-ct" id="dataset">
@@ -119,11 +119,19 @@
 						We evaluate four different approaches to yoga classification. The first two are uni-modal models
 						where we try classifying using the heatmap from the smart mats, provided by YogiFi, and the
 						keypoints that we extracted from the yoga pose images of Yoga-82 and yoga pose images from
-						YogiFi, using TensorFlow's Movenet model.
+						YogiFi, using TensorFlow's Movenet model. The other two are multi-modal models which use early
+						fusion and late fusion techniques.
 					</p>
 					<p>Each heatmap has 1320 values, which can be represented as a 60x22 image. These images are used to
 						fine-tune a pre-trained EfficientNet-B0 convoluted neural network (CNN). We apply various
 						pre-processing transformations such as denoising, extracting contours and centering.</p>
+
+					<p>We train a custom neural network using 17 keypoints extracted using Tensorflow's Movement model
+						from yoga poses curated from Yoga-82 and YogiFi's yoga pose images. The keypoints are centered
+						and normalized before being fed into the neural net model.</p>
+
+					<p>In the early fusion model, we augment the heatmap data with the keypoints data and transform it
+						into an image where the last three rows contain the encoded keypoints data.</p>
 				</section>
 				<section class="views column-ct" id="howitworks">
 					<h2>How it works</h2>
