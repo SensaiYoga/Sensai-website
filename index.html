@@ -87,30 +87,31 @@
 				</p>
 
 			</div>
+			<div class="row justify-content-evenly">
+				<div class="col-md-3">
+					<figure class="figure">
+						<img src="assets/poses/YFA0001.png" alt="Palm Tree Pose" class="figure-img img-fluid rounded" />
+						<figcaption class="figure-caption">Palm Tree
+							Pose</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-3">
+					<figure class="figure">
+						<img src="assets/poses/YFA0002.png" alt="Prayer Pose" class="figure-img img-fluid rounded" />
+						<figcaption class="figure-caption">Prayer
+							Pose</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-3">
+					<figure class="figure">
+						<img src="assets/poses/YFA0003.png" alt="Standing Backbend Pose"
+							class="figure-img img-fluid rounded" />
+						<figcaption class="figure-caption">Standing Backbend Pose</figcaption>
+					</figure>
+				</div>
+			</div>
 		</div>
-		<div class="row justify-content-evenly">
-			<div class="col-md-3">
-				<figure class="figure">
-					<img src="assets/poses/YFA0001.png" alt="Palm Tree Pose" class="figure-img img-fluid rounded" />
-					<figcaption class="figure-caption">Palm Tree
-						Pose</figcaption>
-				</figure>
-			</div>
-			<div class="col-md-3">
-				<figure class="figure">
-					<img src="assets/poses/YFA0002.png" alt="Prayer Pose" class="figure-img img-fluid rounded" />
-					<figcaption class="figure-caption">Prayer
-						Pose</figcaption>
-				</figure>
-			</div>
-			<div class="col-md-3">
-				<figure class="figure">
-					<img src="assets/poses/YFA0003.png" alt="Standing Backbend Pose"
-						class="figure-img img-fluid rounded" />
-					<figcaption class="figure-caption">Standing Backbend Pose</figcaption>
-				</figure>
-			</div>
-		</div>
+
 		<hr class="featurette-divider">
 		<div class="row featurette" id="features">
 			<div class="col-md-12">
@@ -229,6 +230,33 @@
 		<hr class="featurette-divider">
 		<div class="row featurette" id="posture">
 			<h2 class="featurette-heading fw-normal lh-1">Posture Scoring</h2>
+			<p class="lead">We came up with a posture scoring algorithm, based on 2D geometry, using keypoints. We
+				measure 8 angles at 4 joints (left and right) - elbow, shoulder, hip, and knee.
+				The 8 angles contribute 8*360 = 2880 total points towards the score. We use an expert’s keypoints as
+				reference and allow a tolerance for deviations at each joint. We penalize deviation of angles from the
+				expert’s joints by subtracting them from the total score. We finally normalize this score.
+			</p>
+			<div class="row justify-content-evenly">
+				<div class="col-md-3 align-self-center">
+					<figure class="figure">
+						<img src="assets/poses/user keypoints.png" alt="Users Keypoints" class="figure-img img-fluid rounded" />
+						<figcaption class="figure-caption">User's Keypoints</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-3 align-self-center">
+					<figure class="figure">
+						<img src="assets/poses/expert keypoints.png" alt="Experts Keypoints" class="figure-img img-fluid rounded" />
+						<figcaption class="figure-caption">Expert's Keypoints</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-3 align-self-center">
+					<figure class="figure">
+						<img src="assets/poses/score.png" alt="Posture Score"
+							class="figure-img img-fluid rounded" />
+						<figcaption class="figure-caption">Posture Score</figcaption>
+					</figure>
+				</div>
+			</div>
 
 		</div>
 		<hr class="featurette-divider">
@@ -286,7 +314,7 @@
 				<div class="col-md-6">
 					<p class="lead">The late-fusion model was to achieve high training and validation accuracy of
 						nearly
-						100%.
+						<strong>100%</strong>.
 						The confusion matrix shows that it is able to classify almost all of the poses with only a
 						fraction
 						of poses being falsely predicted.
@@ -312,7 +340,7 @@
 		<div class="row featurette" id="theteam">
 			<h2 class="featurette-heading fw-normal lh-1">Meet the team</h2>
 			<div class="row justify-content-evenly">
-				<div class="card profile" style="width: 14rem;">
+				<div class="card profile border-0" style="width: 14rem;">
 					<img src="assets/members/atreyi.png" class="card-img-top" alt="Atreyi">
 					<div class="card-body">
 						<p class="profile-name">Atreyi Dasmahapatra</p>
@@ -320,7 +348,7 @@
 					</div>
 				</div>
 
-				<div class="card profile" style="width: 14rem;">
+				<div class="card profile border-0" style="width: 14rem;">
 					<img src="assets/members/ajeya.png" class="card-img-top" alt="Ajeya">
 					<div class="card-body">
 						<p class="profile-name">Ajeya Jayaram</p>
@@ -328,7 +356,7 @@
 					</div>
 				</div>
 
-				<div class="card profile" style="width: 14rem;">
+				<div class="card profile border-0" style="width: 14rem;">
 					<img src="assets/members/andrew.png" class="card-img-top" alt="Andrew">
 					<div class="card-body">
 						<p class="profile-name">Andrew Sotoodeh</p>
@@ -336,7 +364,7 @@
 					</div>
 				</div>
 
-				<div class="card profile" style="width: 14rem;">
+				<div class="card profile border-0" style="width: 14rem;">
 					<img src="assets/members/pavan.png" class="card-img-top" alt="Pavan">
 					<div class="card-body">
 						<p class="profile-name">Pavan Emani</p>
@@ -344,7 +372,7 @@
 					</div>
 				</div>
 
-				<div class="card profile" style="width: 14rem;">
+				<div class="card profile border-0" style="width: 14rem;">
 					<img src="assets/members/shannie.png" class="card-img-top" alt="Shannie">
 					<div class="card-body">
 						<p class="profile-name">Shannie Cheng</p>
