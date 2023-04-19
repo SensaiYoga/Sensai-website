@@ -1,258 +1,373 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<title>AI powered yoga app</title>
-	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sacramento&display=swap"
 		rel="stylesheet">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
 </head>
 
-<body>
-	<div class="container">
-		<nav>
-			<ul class="menu">
-				<a href="#" class="active">Home</a>
-				<a href="#overview">Overview</a>
-				<a href="#features">Features</a>
-				<a href="#howitworks">Architecture</a>
-				<a href="#dataset">Datasets</a>
-				<a href="#modeling">Modeling</a>
-				<a href="#results">Results</a>
-				<a href="#demo">Demo</a>
-				<a href="#theteam">The Team</a>
-			</ul>
-		</nav>
-		<main>
-			<div class="content">
-				<!-- <section class="views">
-				<div class="img-block">
-					<img src="assets/sensai.png" height="400" />
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent">
+	<nav id="navbar" class="navbar bg-primary navbar-expand-lg sticky-top" data-bs-theme="dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img src="assets/sensai.png" alt="SensAI" width="50" height="50"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#overview">Overview</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#features">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#howitworks">Architecture</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#datasets">Datasets</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#modeling">Modeling</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#results">Results</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#demo">Demo</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#theteam">The Team</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<iframe width="100%" height="420"
+		src="https://www.youtube.com/embed/Vn-gTj-zL8I?controls=0&autoplay=1&mute=1&loop=1&playlist=Vn-gTj-zL8I&mode=theatre"
+		title="YouTube video player" frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		allowfullscreen></iframe>
+
+	<main class="container">
+		<div class="row featurette" id="overview">
+			<div class="col-md-12">
+				<h2 class="featurette-heading fw-normal lh-1">Overview</h2>
+				<p class="lead">
+					Yoga is about 5000 years old and one of the ancient and proven forms of exercise for gaining
+					fitness.
+					It is the most used complementary health approach in the US. The yoga industry is projected to
+					reach $215 billion by 2025. In spite of this, there is a lack of on-demand access to quality
+					feedback while
+					performing yoga.
+				</p>
+				<p class="lead">We partnered with a smart yoga mat manufacturer, <a
+						href="https://yogifi.fit/">YogiFi</a>, that
+					uses the heatmap from the pressure-sensitive, smart yoga mats to classify yoga poses and provide
+					recommendations to its customers. However, due to heatmap signatures being the same for some
+					yoga poses, with difference being only in the upper body postures, YogiFi had challenges
+					classifying
+					them.
+				</p>
+
+			</div>
+		</div>
+		<div class="row justify-content-evenly">
+			<div class="col-md-3">
+				<figure class="figure">
+					<img src="assets/poses/YFA0001.png" alt="Palm Tree Pose" class="figure-img img-fluid rounded" />
+					<figcaption class="figure-caption">Palm Tree
+						Pose</figcaption>
+				</figure>
+			</div>
+			<div class="col-md-3">
+				<figure class="figure">
+					<img src="assets/poses/YFA0002.png" alt="Prayer Pose" class="figure-img img-fluid rounded" />
+					<figcaption class="figure-caption">Prayer
+						Pose</figcaption>
+				</figure>
+			</div>
+			<div class="col-md-3">
+				<figure class="figure">
+					<img src="assets/poses/YFA0003.png" alt="Standing Backbend Pose"
+						class="figure-img img-fluid rounded" />
+					<figcaption class="figure-caption">Standing Backbend Pose</figcaption>
+				</figure>
+			</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette" id="features">
+			<div class="col-md-12">
+				<h2 class="featurette-heading fw-normal lh-1">Features</h2>
+				<p class="lead">
+					To address the challenges faced by YogiFi, we developed SensAI. Some of the highlights of our
+					solution are:
+				</p>
+				<ul>
+					<li>
+						An AI powered web application that addresses significant pain point in yoga by providing
+						accurate feedback on alignment and posture.
+					</li>
+					<li>
+						It offers a non-intrusive solution that respects user privacy.
+					</li>
+					<li>
+						It leverages latest advancements in Machine Learning, Computer Vision and the best
+						practices of Software Engineering to provide a low-cost serverless architecture hosted
+						on Amazon Web Services (AWS).
+					</li>
+					<li>Our solution has the potential to be applied to other fitness domains.</li>
+				</ul>
+			</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette" id="howitworks">
+			<h2 class="featurette-heading fw-normal lh-1">How it works</h2>
+
+			<div class="col-md-7">
+				<p class="lead">SensAI leverages state-of-the-art Machine Learning solutions and Software
+					Engineering best
+					practices to
+					provide a low-cost, serverless yoga assistant hosted on AWS. The application is set up using
+					Infrastructure as Code to
+					quickly bring up all of the application infrastructure and optimize developer efficiency. The
+					front-end is a React app hosted on AWS Amplify, We use Amazon cognito for managing users and AWS
+					Sagemaker serverless inference endpoint backed by API gateway, to host our model and to make
+					inference. </p>
+			</div>
+			<div class="col-md-5">
+				<figure class="figure">
+					<img src="assets/architecture.png" class="figure-img img-fluid rounded bg-secondary" />
+					<figcaption class="figure-caption">Architecture</figcaption>
+				</figure>
+			</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette" id="datasets">
+			<h2 class="featurette-heading fw-normal lh-1">Datasets</h2>
+			<p class="lead">Our primary dataset is the heatmap data collected from the pressure-sensitive smart yoga
+				mats
+				from YogiFi. This dataset contained 13,571 unique heatmaps for 58 yoga poses.</p>
+			<p class="lead">We create a secondary dataset using yoga pose images obtained from <a
+					href="https://sites.google.com/view/yoga-82/home">Yoga-82</a> and yoga pose images shared by
+				YogiFi. Using TensorFlow's <a href="https://www.tensorflow.org/hub/tutorials/movenet">Movenet</a>
+				model, we extract 17
+				keypoints for 952 yoga pose images corresponding to 9 yoga poses.</p>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette" id="modeling">
+			<h2 class="featurette-heading fw-normal lh-1">Modeling</h2>
+			<p class="lead">
+				We evaluate four different approaches to yoga classification. The first two are uni-modal models
+				where we try classifying using the heatmap from the smart mats, provided by YogiFi, and the
+				keypoints that we extracted from the yoga pose images of Yoga-82 and yoga pose images from
+				YogiFi, using TensorFlow's Movenet model. The other two are multi-modal models which use early
+				fusion and late fusion techniques.
+			</p>
+			<p class="lead">Each heatmap has 1320 values, which can be represented as a 60x22 image. These images
+				are used to
+				fine-tune a pre-trained EfficientNet-B0 convoluted neural network (CNN). We apply various
+				pre-processing transformations such as denoising, extracting contours and centering.</p>
+
+			<p class="lead">We train a custom neural network using 17 keypoints extracted using Tensorflow's
+				Movement model
+				from yoga poses curated from Yoga-82 and YogiFi's yoga pose images. The keypoints are centered
+				and normalized before being fed into the neural net model.</p>
+
+			<div class="row">
+				<p class="lead">In the early fusion model, we augment the heatmap data with the keypoints data
+					and
+					transform it
+					into an image where the last three rows contain the encoded keypoints data.</p>
+
+			</div>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<figure class="figure">
+						<img src="assets/model/early-fusion.png" alt="early fusion"
+							class="figure-img img-fluid rounded bg-secondary" />
+						<figcaption class="figure-caption">Early Fusion</figcaption>
+					</figure>
 				</div>
-			</section>
-			<section class="views">
-				<div class="img-block" style="color: #debf76; font-size: 1.3em; padding-bottom: 1em;">
-					AI Powered Yoga App
+				<div class="col-md-3"></div>
+			</div>
+			<div class="row">
+				<p class="lead">In late fusion, we run the two uni-modal trained independently on the two modalities
+					i.e.
+					heatmaps and kepypoints and then combine the outputs from the last layers and feed it into a
+					classfier.</p>
+			</div>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<figure class="figure">
+						<img src="assets/model/late-fusion.png" alt="late fusion"
+							class="figure-img img-fluid rounded bg-secondary" />
+						<figcaption class="figure-caption">Late Fusion</figcaption>
+					</figure>
 				</div>
-			</section> -->
-				<section class="views">
-					<div class="img-block">
-						<iframe width="100%" height="420"
-							src="https://www.youtube.com/embed/Vn-gTj-zL8I?controls=0&autoplay=1&mute=1&loop=1&playlist=Vn-gTj-zL8I&mode=theatre"
-							title="YouTube video player" frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							allowfullscreen></iframe>
-					</div>
-				</section>
-				<section class="views column-ct" id="overview">
-					<h2>Overview</h2>
-					<p>
-						Yoga is about 5000 years old and one of the ancient and proven forms of exercise for gaining
-						fitness.
-						It is the most used complementary health approach in the US. The yoga industry is projected to
-						reach $215 billion by 2025. In spite of this, there is a lack of on-demand access to quality
-						feedback while
-						performing yoga.
-					</p>
-					<p>We partnered with a smart yoga mat manufacturer, <a href="https://yogifi.fit/">YogiFi</a>, that
-						uses the heatmap from the pressure-sensitive, smart yoga mats to classify yoga poses and provide
-						recommendations to its customers. However, due to heatmap signatures being the same for some
-						yoga poses, with difference being only in the upper body postures, YogiFi had challenges
-						classifying
-						them.
-					</p>
-					<div class="text-block">
-						<div>
-							<img src="assets/poses/YFA0001.png" alt="Palm Tree Pose" height="200px" width="200px" />
-							<p>Palm Tree
-								Pose</p> 
-						</div>
-						<div><img src="assets/poses/YFA0002.png" alt="Prayer Pose" height="200px" width="200px" />
-							<p>Prayer
-								Pose</p>
-						</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette" id="results">
+			<h2 class="featurette-heading fw-normal lh-1">Results</h2>
+			<p class="lead">The heatmap model has <strong>94%</strong> accuracy and is able to decluster most of
+				the yoga poses. However, the model performs poorly on 3 clustered poses. mainly because the heat
+				maps are identical and the yoga asana difference lies only in the upper body posture.
+			</p>
 
-						<div><img src="assets/poses/YFA0003.png" alt="Standing Backbend Pose" height="200px"
-								width="200px" />
-							<p>Standing Backbend Pose</p>
-						</div>
-
-					</div>
-				</section>
-				<section class="views column-ct" id="features">
-					<h2>Features</h2>
-					<div>
-						To address the challenges faced by YogiFi, we developed SensAI. Some of the highlights of our
-						solution are:
-						<ul>
-							<li>
-								An AI powered web application that addresses significant pain point in yoga by providing
-								accurate feedback on alignment and posture.
-							</li>
-							<li>
-								It offers a non-intrusive solution that respects user privacy.
-							</li>
-							<li>
-								It leverages latest advancements in Machine Learning, Computer Vision and the best
-								practices of Software Engineering to provide a low-cost serverless architecture hosted
-								on Amazon Web Services (AWS).
-							</li>
-							<li>Our solution has the potential to be applied to other fitness domains.</li>
-						</ul>
-					</div>
-				</section>
-				<section class="views column-ct" id="howitworks">
-					<h2>How it works</h2>
-					<p>SensAI leverages state-of-the-art Machine Learning solutions and Software Engineering best
-						practices to
-						provide a low-cost, serverless yoga assistant hosted on AWS. The application is set up using
-						Infrastructure as Code to
-						quickly bring up all of the application infrastructure and optimize developer efficiency. The
-						front-end is a React app hosted on AWS Amplify, We use Amazon cognito for managing users and AWS
-						Sagemaker serverless inference endpoint backed by API gateway, to host our model and to make
-						inference. </p>
-					<div class="text-block">
-						<img src="assets/architecture.png" height="400" style="border:5px" />
-					</div>
-				</section>
-
-				<section class="views column-ct" id="dataset">
-					<h2>Datasets</h2>
-					<p>Our primary dataset is the heatmap data collected from the pressure-sensitive smart yoga mats
-						from YogiFi. This dataset contained 13,571 unique heatmaps for 58 yoga poses.</p>
-					<p>We create a secondary dataset using yoga pose images obtained from <a
-							href="https://sites.google.com/view/yoga-82/home">Yoga-82</a> and yoga pose images shared by
-						YogiFi. Using TensorFlow's <a
-							href="https://www.tensorflow.org/hub/tutorials/movenet">Movenet</a> model, we extract 17
-						keypoints for 952 yoga pose images corresponding to 9 yoga poses.</p>
-				</section>
-				<section class="views column-ct" id="modeling">
-					<h2>Modeling</h2>
-					<p>
-						We evaluate four different approaches to yoga classification. The first two are uni-modal models
-						where we try classifying using the heatmap from the smart mats, provided by YogiFi, and the
-						keypoints that we extracted from the yoga pose images of Yoga-82 and yoga pose images from
-						YogiFi, using TensorFlow's Movenet model. The other two are multi-modal models which use early
-						fusion and late fusion techniques.
-					</p>
-					<p>Each heatmap has 1320 values, which can be represented as a 60x22 image. These images are used to
-						fine-tune a pre-trained EfficientNet-B0 convoluted neural network (CNN). We apply various
-						pre-processing transformations such as denoising, extracting contours and centering.</p>
-
-					<p>We train a custom neural network using 17 keypoints extracted using Tensorflow's Movement model
-						from yoga poses curated from Yoga-82 and YogiFi's yoga pose images. The keypoints are centered
-						and normalized before being fed into the neural net model.</p>
-
-					<p>In the early fusion model, we augment the heatmap data with the keypoints data and transform it
-						into an image where the last three rows contain the encoded keypoints data.</p>
-					<img src="assets/model/early-fusion.png" alt="early fusion" height="400" width="800"
-						style="align-self: center;" />
-
-					<p>In late fusion, we run the two uni-modal trained independently on the two modalities i.e.
-						heatmaps and kepypoints and then combine the outputs from the last layers and feed it into a
-						classfier.</p>
-					<img src="assets/model/late-fusion.png" alt="late fusion" height="400" width="800"
-						style="align-self: center;" />
-				</section>
-				<section class="views column-ct" id="results">
-					<h2>Results</h2>
-					<p>The heatmap model has <strong>94%</strong> accuracy and is able to decluster most of
-						the yoga poses. However, the model performs poorly on 3 clustered poses. mainly because the heat
-						maps are identical and the yoga asana difference lies only in the upper body posture.
-					</p>
-					<p>The keypoints model has <strong>95%</strong> accuracy, implying that keypoints are able to
+			<div class="row">
+				<div class="col-md-9">
+					<p class="lead">The keypoints model has <strong>95%</strong> accuracy, implying that keypoints
+						are
+						able
+						to
 						decluster most of the poses. However, the model performs poorly on postures that are only
-						different in the hand gestures and facial orientation since the Movenet model we use to extract
+						different in the hand gestures and facial orientation since the Movenet model we use to
+						extract
 						keypoints does not capture them. We see that with the keypoints model is
-						still not able to decluster all of the poses.</p> <img
-						src="assets/model/keypoints-confusion.png" alt="keypoints confusion matrix" height="400"
-						width="400" style="align-self: center;" />
+						still not able to decluster all of the poses.</p>
+				</div>
 
-					<p>The results from the early-fusion validates our hypothesis that we can use multimodal model to
+				<div class="col-md-3">
+					<figure class="figure">
+						<img src="assets/model/keypoints-confusion.png" alt="keypoints confusion matrix"
+							class="figure-img img-fluid rounded" />
+						<figcaption class="figure-caption">Confusion Matrix for Keypoints Model</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-9">
+					<p class="lead">The results from the early-fusion validates our hypothesis that we can use
+						multimodal
+						model to
 						decluster the
 						yoga poses that we were not able to with just the heatmap. However, we still see from the
 						confusion
-						matrix, while it improves upon the uni-modal model, the model has some trouble classifying these
+						matrix, while it improves upon the uni-modal model, the model has some trouble classifying
+						these
 						clustered poses.
 					</p>
-					<img src="assets/model/early-fusion-confusion.png" alt="early fusion confusion matrix" height="400"
-						width="400" style="align-self: center;" />
-					<p>The late-fusion model was to achieve high training and validation accuracy of nearly 100%.
+				</div>
+				<div class="col-md-3">
+					<figure class="figure">
+						<img src="assets/model/early-fusion-confusion.png" alt="early fusion confusion matrix"
+							class="figure-img img-fluid rounded" />
+						<figcaption class="figure-caption">Confusion Matrix for Early Fusion Model</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<p class="lead">The late-fusion model was to achieve high training and validation accuracy of
+						nearly
+						100%.
 						The confusion matrix shows that it is able to classify almost all of the poses with only a
 						fraction
 						of poses being falsely predicted.
-
 					</p>
-					<img src="assets/model/late-fusion-confusion.png" alt="late fusion confusion matrix" height="400"
-						width="400" style="align-self: center;" />
-				</section>
-				<section class="views column-ct" id="demo">
-					<h2>Demo</h2>
-
-					<body>
-						<video width="100%" height="600vh" style="border:5px; object-fit: scale-down;"
-							poster="assets/sensai.png" controls="controls">
-							<source src="assets/videos/Capstone_Demo.mp4" type="video/mp4">
-						</video>
-					</body>
-				</section>
-				<section class="views column-ct" id="theteam">
-					<h2>Meet the team</h2>
-					<div class="text-block">
-						<div class="profile">
-							<img src="assets/members/atreyi.png" />
-							<p class="profile-name">Atreyi Dasmahapatra
-							<p>
-							<p class="profile-title">Project Manager</p>
-						</div>
-						<div class="profile">
-							<img src="assets/members/ajeya.png" />
-							<p class="profile-name">Ajeya Jayaram
-							<p>
-							<p class="profile-title">Front-end Engineer</p>
-						</div>
-						<div class="profile">
-							<img src="assets/members/andrew.png" />
-							<p class="profile-name">Andrew Sotoodeh
-							<p>
-							<p class="profile-title">ML Engineer</p>
-						</div>
-						<div class="profile">
-							<img src="assets/members/pavan.png" />
-							<p class="profile-name">Pavan Emani
-							<p>
-							<p class="profile-title">Data Engineer</p>
-						</div>
-						<div class="profile">
-							<img src="assets/members/shannie.png" />
-							<p class="profile-name">Shannie Cheng
-							<p>
-							<p class="profile-title">Applied Scientist</p>
-						</div>
-					</div>
-				</section>
-				<section class="views column-ct" id="footnoes">
-					<h2>Acknowledgements</h2>
-					<p>We would like to extend our gratitude to our instructors - Fred Nugen and Ramesh Sarukkai
-						for their support and guidance. We thank YogiFi's Sankar Dasiga, Muralidhar Somisetty & Vinod
-						Ajjarapu, who provided us with the smart yoga mat and
-						shared their heatmap dataset with us.
-					</p>
-
-					<div>
-						<img src="assets/Berkeley.png" width="200px" />
-						<img src="assets/yogifi.png" width="200px">
-					</div>
-
-				</section>
+				</div>
+				<div class="col-md-6">
+					<figure class="figure">
+						<img src="assets/model/late-fusion-confusion.png" alt="late fusion confusion matrix"
+							class="figure-img img-fluid rounded" />
+						<figcaption class="figure-caption">Confusion Matrix for Late Fusion Model</figcaption>
+					</figure>
+				</div>
 			</div>
-		</main>
-	</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette" id="demo">
+			<h2 class="featurette-heading fw-normal lh-1">Demo</h2>
+			<video poster="assets/sensai.png" controls="controls">
+				<source src="assets/videos/Capstone_Demo.mp4" type="video/mp4">
+			</video>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette" id="theteam">
+			<h2 class="featurette-heading fw-normal lh-1">Meet the team</h2>
+			<div class="row justify-content-evenly">
+				<div class="card profile" style="width: 14rem;">
+					<img src="assets/members/atreyi.png" class="card-img-top" alt="Atreyi">
+					<div class="card-body">
+						<p class="profile-name">Atreyi Dasmahapatra</p>
+						<p class="profile-title">Project Manager</p>
+					</div>
+				</div>
+
+				<div class="card profile" style="width: 14rem;">
+					<img src="assets/members/ajeya.png" class="card-img-top" alt="Ajeya">
+					<div class="card-body">
+						<p class="profile-name">Ajeya Jayaram</p>
+						<p class="profile-title">Front-end Engineer</p>
+					</div>
+				</div>
+
+				<div class="card profile" style="width: 14rem;">
+					<img src="assets/members/andrew.png" class="card-img-top" alt="Andrew">
+					<div class="card-body">
+						<p class="profile-name">Andrew Sotoodeh</p>
+						<p class="profile-title">ML Engineer</p>
+					</div>
+				</div>
+
+				<div class="card profile" style="width: 14rem;">
+					<img src="assets/members/pavan.png" class="card-img-top" alt="Pavan">
+					<div class="card-body">
+						<p class="profile-name">Pavan Emani</p>
+						<p class="profile-title">Data Engineer</p>
+					</div>
+				</div>
+
+				<div class="card profile" style="width: 14rem;">
+					<img src="assets/members/shannie.png" class="card-img-top" alt="Shannie">
+					<div class="card-body">
+						<p class="profile-name">Shannie Cheng</p>
+						<p class="profile-title">Applied Scientist</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette">
+			<h2 class="featurette-heading fw-normal lh-1">Acknowledgements</h2>
+			<p class="lead">We would like to extend our gratitude to our instructors - Fred Nugen and Ramesh Sarukkai
+				for their support and guidance. We thank YogiFi's Sankar Dasiga, Muralidhar Somisetty & Vinod
+				Ajjarapu, who provided us with the smart yoga mat and
+				shared their heatmap dataset with us.
+			</p>
+			<div class="row"></div>
+			<hr class="featurette-divider">
+			<div class="row justify-content-evenly">
+				<div class="col-md-3 .text-primary align-baseline">
+					<img src="assets/Berkeley.png" />
+				</div>
+				<div class="col-md-3 align-baseline">
+					<img src="assets/yogifi.png">
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+		crossorigin="anonymous"></script>
 	<script src="js/index.js"></script>
 </body>
 

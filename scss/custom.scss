@@ -1,0 +1,65 @@
+$primary: #2c0b2c;
+$secondary: #fdd667;
+
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+
+$custom-theme-colors: (
+    altlight: #fef8e4,
+    altdark:  $primary
+);
+
+$theme-colors: map_merge($custom-theme-colors, $theme-colors);
+
+// $body-color: $secondary;
+// $body-bg: $primary;
+
+ul {
+  list-style-type: "𑁍";
+}
+
+li {
+  padding-left: 2em;
+}
+
+h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 4rem !important;
+  text-align: center;
+  color: $primary !important;
+  @media (max-width: 660px) {
+    font-size: 3rem !important;
+  }
+}
+
+.profile {
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+}
+
+.profile p {
+  text-align: center;
+  margin: 0.1em 0;
+}
+
+.profile img {
+  min-height: 150px;
+  border-radius: 150px;
+  background-color: $secondary;
+}
+
+.profile-name {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: $primary
+}
+
+.profile-title {
+  font-size: 0.7em;
+  font-style: italic;
+  color: $primary
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,27 @@
+{
+  "name": "sensai",
+  "version": "1.0.0",
+  "description": "sensai project website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SensaiYoga/Sensai.git"
+  },
+  "keywords": [
+    "Sensai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SensaiYoga/Sensai/issues"
+  },
+  "homepage": "https://github.com/SensaiYoga/Sensai#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha3",
+    "node-sass": "^8.0.0"
+  }
+}
