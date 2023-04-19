@@ -112,7 +112,7 @@
 			</div>
 		</div>
 
-		<hr class="featurette-divider">
+		<hr class="featurette-divider border-altdark">
 		<div class="row featurette" id="features">
 			<div class="col-md-12">
 				<h2 class="featurette-heading fw-normal lh-1">Features</h2>
@@ -122,22 +122,22 @@
 				</p>
 				<ul>
 					<li>
-						An AI powered web application that addresses significant pain point in yoga by providing
-						accurate feedback on alignment and posture.
+						<p class="lead">An AI powered web application that addresses significant pain point in yoga by providing
+						accurate feedback on alignment and posture.<p>
 					</li>
 					<li>
-						It offers a non-intrusive solution that respects user privacy.
+						<p class="lead">It offers a non-intrusive solution that respects user privacy.</p>
 					</li>
 					<li>
-						It leverages latest advancements in Machine Learning, Computer Vision and the best
+						<p class="lead">It leverages latest advancements in Machine Learning, Computer Vision and the best
 						practices of Software Engineering to provide a low-cost serverless architecture hosted
-						on Amazon Web Services (AWS).
+						on Amazon Web Services (AWS).</p>
 					</li>
-					<li>Our solution has the potential to be applied to other fitness domains.</li>
+					<li><p class="lead">Our solution has the potential to be applied to other fitness domains.</p></li>
 				</ul>
 			</div>
 		</div>
-		<hr class="featurette-divider">
+		<hr class="featurette-divider border-altdark">
 		<div class="row featurette" id="howitworks">
 			<h2 class="featurette-heading fw-normal lh-1">How it works</h2>
 
@@ -159,7 +159,7 @@
 				</figure>
 			</div>
 		</div>
-		<hr class="featurette-divider">
+		<hr class="featurette-divider border-altdark">
 		<div class="row featurette" id="datasets">
 			<h2 class="featurette-heading fw-normal lh-1">Datasets</h2>
 			<p class="lead">Our primary dataset is the heatmap data collected from the pressure-sensitive smart yoga
@@ -171,7 +171,7 @@
 				model, we extract 17
 				keypoints for 952 yoga pose images corresponding to 9 yoga poses.</p>
 		</div>
-		<hr class="featurette-divider">
+		<hr class="featurette-divider border-altdark">
 		<div class="row featurette" id="modeling">
 			<h2 class="featurette-heading fw-normal lh-1">Modeling</h2>
 			<p class="lead">
@@ -227,14 +227,14 @@
 				<div class="col-md-3"></div>
 			</div>
 		</div>
-		<hr class="featurette-divider">
+		<hr class="featurette-divider border-altdark">
 		<div class="row featurette" id="posture">
 			<h2 class="featurette-heading fw-normal lh-1">Posture Scoring</h2>
 			<p class="lead">We came up with a posture scoring algorithm, based on 2D geometry, using keypoints. We
 				measure 8 angles at 4 joints (left and right) - elbow, shoulder, hip, and knee.
 				The 8 angles contribute 8*360 = 2880 total points towards the score. We use an expert’s keypoints as
 				reference and allow a tolerance for deviations at each joint. We penalize deviation of angles from the
-				expert’s joints by subtracting them from the total score. We finally normalize this score.
+				expert’s joints by subtracting them from the total score. We finally scale this score to 100.
 			</p>
 			<div class="row justify-content-evenly">
 				<div class="col-md-3 align-self-center">
@@ -259,7 +259,7 @@
 			</div>
 
 		</div>
-		<hr class="featurette-divider">
+		<hr class="featurette-divider border-altdark">
 		<div class="row featurette" id="results">
 			<h2 class="featurette-heading fw-normal lh-1">Results</h2>
 			<p class="lead">The heatmap model has <strong>94%</strong> accuracy and is able to decluster most of
@@ -329,14 +329,14 @@
 				</div>
 			</div>
 		</div>
-		<hr class="featurette-divider">
+		<hr class="featurette-divider border-altdark">
 		<div class="row featurette" id="demo">
 			<h2 class="featurette-heading fw-normal lh-1">Demo</h2>
 			<video poster="assets/sensai.png" controls="controls">
 				<source src="assets/videos/Capstone_Demo.mp4" type="video/mp4">
 			</video>
 		</div>
-		<hr class="featurette-divider">
+		<hr class="featurette-divider border-altdark">
 		<div class="row featurette" id="theteam">
 			<h2 class="featurette-heading fw-normal lh-1">Meet the team</h2>
 			<div class="row justify-content-evenly">
@@ -381,7 +381,7 @@
 				</div>
 			</div>
 		</div>
-		<hr class="featurette-divider">
+		<hr class="featurette-divider border-altdark">
 		<div class="row featurette">
 			<h2 class="featurette-heading fw-normal lh-1">Acknowledgements</h2>
 			<p class="lead">We would like to extend our gratitude to our instructors - Fred Nugen and Ramesh Sarukkai
@@ -390,7 +390,7 @@
 				shared their heatmap dataset with us.
 			</p>
 			<div class="row"></div>
-			<hr class="featurette-divider">
+			<hr class="featurette-divider border-altdark">
 			<div class="row justify-content-evenly">
 				<div class="col-md-3 .text-primary align-baseline">
 					<img src="assets/Berkeley.png" />

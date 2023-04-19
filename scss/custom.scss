@@ -7,7 +7,7 @@ $secondary: #fdd667;
 
 $custom-theme-colors: (
     altlight: #fef8e4,
-    altdark:  $primary
+    altdark:  #6a3158
 );
 
 $theme-colors: map_merge($custom-theme-colors, $theme-colors);
@@ -27,7 +27,7 @@ h2 {
   font-family: "Sacramento", cursive;
   font-size: 4rem !important;
   text-align: center;
-  color: $primary !important;
+  color: #6a3158 !important;
   @media (max-width: 660px) {
     font-size: 3rem !important;
   }
